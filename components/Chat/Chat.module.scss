@@ -1,0 +1,111 @@
+.container {
+  position: fixed;
+  right: 0;
+  top: 0;
+  max-width: 300px;
+  height: 100vh;
+  max-height: 100vh;
+  pointer-events: pointer;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #f4e1c4;
+  border-radius: 5px;
+  gap: 10px;
+  padding: 0 10px;
+  justify-content: space-between;
+}
+.name {
+  font-size: 20px;
+  font-weight: bold;
+}
+.body {
+  padding: 20px 10px 0px 10px;
+  position: relative;
+  flex: 1 1 auto;
+  background-color: #e8dfbd;
+  border-radius: 5px;
+  overflow-y: scroll;
+  display: inline-grid;
+  align-content: start;
+
+  gap: 10px;
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #f4e29e;
+  }
+  &::-webkit-scrollbar-thumb {
+    box-shadow: inset 10px 10px 10px #e1c971;
+  }
+}
+.typing {
+  display: flex;
+  background-color: #d4c585;
+  padding: 4px 0px 4px 10px;
+  gap: 5px;
+  align-items: center;
+}
+.input {
+  width: 100%;
+  border: none;
+  min-height: 30px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+  resize: none;
+  font-size: rem(18);
+}
+.message {
+  display: inline-block;
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  justify-self: start;
+}
+.messageOwn {
+  display: inline-block;
+  background-color: rgb(175, 203, 216);
+  padding: 5px 10px;
+  border-radius: 20px;
+  justify-self: end;
+}
+
+.callContainer {
+  flex: 1 1 auto;
+  background-color: #9fbad4;
+}
+.content {
+  height: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+.closeButton {
+  cursor: pointer;
+}
+.bottom {
+  height: 20px;
+  width: 100%;
+}
+.scrollButton {
+  justify-self: end;
+  max-width: 30px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: sticky;
+  right: 0;
+  top: 0;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: #79bdcf;
+}
